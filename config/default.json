@@ -1,0 +1,6 @@
+{
+    "port" :  3000,
+    "jwtkey" : "noidea",
+    "cookie": "somecookiekey",
+    "mongoURL" : "mongodb+srv://admin:admin@mongo.87plr.mongodb.net/CRUD?retryWrites=true&w=majority"
+}

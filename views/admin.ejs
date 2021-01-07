@@ -1,0 +1,74 @@
+<%- include ('components/adminPageHeader.ejs') -%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+body{
+        /* background-color: rgba(0, 0, 0, 0.719); */
+        background-image: linear-gradient(to bottom right,#c2adbbda, #8f9497, rgba(255, 255, 255, 0.123)), url('https://images.unsplash.com/photo-1527567018838-584d3468eb85?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyMDEzMzEyfHxlbnwwfHx8&w=1000&q=80') ;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+
+
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 18%;
+            height: 250px;
+            margin-left: 40px;
+            margin-right: 40px;
+             background-color: rgba(0, 0, 0, 0.568) !important;
+        }
+
+      
+        .card:hover {
+            box-shadow: 0px 6px 20px 1px black;
+        }
+
+        .section {
+            margin-top: 150px;
+            margin-left: 100px;
+            margin-bottom: 50px;
+            display: inline-flex;           
+        }
+    </style>
+    </head>
+
+    <body>
+        <section class="section">
+
+
+            <div class="card">
+                <a style="color: black;" href="/admin/articles">
+                    <img src="/images/forarticles.jpg" alt="Avatar" style="width:100%; height: 150px;">
+                    <div style="text-align: center; margin-top: 20px;">
+
+                        <h5><b>Հոդվածներ</b></h5>
+                        <p>Տեսնել բոլոր հոդվածները</p>
+
+                    </div>
+                </a>
+            </div>
+
+
+
+
+            <div class="card">
+                <a style="color: black;" href="/admin/create-article">
+                    <img src="/images/write.jpg" alt="Avatar" style="width:100%; height: 150px;">
+                    <div style="text-align: center; margin-top: 20px;">
+
+                        <h5><b>Նոր հոդված</b></h5>
+                        <p>Ավելացնել նոր հոդված </p>
+
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+        <%- include('components/footer.ejs') -%>

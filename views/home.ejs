@@ -1,0 +1,25 @@
+<%- include ('components/header.ejs') -%>
+    <title>Homework33 || Home</title>
+
+    <div style="margin: 50px; ">
+        <% for(let article of articles){ %>
+        <h1 class="text-center" style="margin-top: 50px; border-bottom: double;">
+            <%=article.title%>
+        </h1>
+
+        <h6 class="text-center">
+            <%=article.description%>
+        </h6>
+
+        <div style="margin: 40px 20px;">
+            <img src="/uploads/<%=article.imgname%>" class="img-fluid" alt="image" style="max-width:500px !important; max-height: 500px;">
+        </div>
+
+
+        <p style="margin-bottom: 50px;">
+            <%-article.content%>
+        </p>
+        <% } %>
+    </div>
+
+    <%- include('components/footer.ejs') -%>

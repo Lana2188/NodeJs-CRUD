@@ -1,0 +1,57 @@
+<%- include('components/header.ejs') -%>
+<title>Registration form</title>
+
+	<style>
+		html,
+		body {
+			background-image: url('https://i.pinimg.com/564x/89/1d/ba/891dba8aa83e3cc103112c937e50313f.jpg');
+			background-position: center;
+			background-attachment: fixed;
+
+		}
+	</style>
+
+	<div class="container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="card">
+				<div class="card-header">
+					<h3>ԳՐԱՆՑՈւՄ</h3>
+
+				</div>
+				<div class="card-body">
+					<form method="POST">
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+							</div>
+							<input type="text" name="email" id="email" class="form-control" placeholder="Էլ.հասցե">
+
+						</div>
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" name="password" id="password" class="form-control"
+								placeholder="Ծածկագիր">
+						</div>
+
+						<% if(message) {%>
+							<p class="p-error"><%- message %></p>
+								<%}%>
+
+									<div class="form-group">
+										<input type="submit" value="Գրանցվել" class="btn float-right login_btn">
+									</div>
+					</form>
+				</div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-center links">
+						Արդեն գրանցված ե՞ք: <a href="/home/login">Մուտք գործեք այստեղ</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<%- include('components/footer.ejs') -%>

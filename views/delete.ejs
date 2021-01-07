@@ -1,0 +1,53 @@
+<%- include ('components/adminHeader.ejs') -%>
+<title>Delete Article</title>
+
+<style>
+    body{
+        /* background-color: rgba(0, 0, 0, 0.719); */
+        background-image: linear-gradient( #ffc41263, rgba(255, 255, 255, 0.089));
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+</style>
+
+<div class="admindiv" style=" bottom: 40px;">
+
+<div>
+    
+   <h5><%= article.title %></h5>
+   
+</div>
+
+<div>    
+   <h6><%= article.description %></h6>
+    
+</div>
+
+<div>
+   <p style="color: black; font-size: small;"><%= article.content %></p> 
+    
+</div>
+
+<div>
+    <img src="/uploads/<%= article.imgname %>" alt="" style="max-width: 200px;">
+  
+</div>
+    
+
+    <form action="" method="POST" enctype="multipart/form-data" class="">
+<input type="text" name="id" hidden value="<%= article._id %>">
+
+
+<div class=inpdiv>
+    
+    <input type="submit" name="" id="" value="Ջնջել">
+</div>
+
+    </form>
+    <a href="/admin/articles">
+    <button style="margin-left: 30px;" >Վերադառնալ</button></a>
+</div>
+
+<%- include('components/footer.ejs') -%>

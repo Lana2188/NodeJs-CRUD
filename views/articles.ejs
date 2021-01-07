@@ -1,0 +1,58 @@
+<%- include ('components/adminHeader.ejs') -%>
+    <title>Articles || All</title>
+
+    <div>
+
+        <table class='table table-bordered table-striped'>
+            <thead>
+                <tr style="text-align: center;">
+                    <th>#</th>
+                    <th>Վերնագիր</th>
+                    <th>Նկարագրություն</th>
+                    <th>Տեքստ</th>
+                    <th>Նկար</th>
+                    <th>Գործողություն</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                 <% for(let row of rows){ %>
+<tr>
+     <td><%=row.id%></td>
+    <td><%=row.title%></td>
+    <td><%=row.description%></td>
+    <td><%-row.content%></td>
+    <td><%=row.imgname%></td>
+
+    <td>
+<a style="margin: 10px;" href="/admin/article/read?id=<%=row.id%>"><i class="fa fa-eye" aria-hidden="true"></i></a>        
+<a style="margin: 10px;" href="/admin/article/edit?id=<%=row.id%>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+<a style="margin: 10px;" href="/admin/article/delete?id=<%=row.id%>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+
+
+    </td>
+</tr>
+<% } %>
+            </tbody>
+        </table>
+       
+
+            
+
+
+        <%- include('components/footer.ejs') -%>
+                
+
+                    
+
+                      
+
+
+
+
+
+
+                           
+    </div>
+
+    <%- include('components/footer.ejs') -%>

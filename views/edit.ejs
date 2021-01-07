@@ -1,0 +1,51 @@
+<%- include ('components/adminHeader.ejs') -%>
+<title>Edit Article</title>
+
+<style>
+    body{
+        /* background-color: rgba(0, 0, 0, 0.719); */
+        background-image: linear-gradient( #ffc41263, rgba(255, 255, 255, 0.089));
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+</style>
+
+<div class="admindiv" style=" bottom: 40px;">
+
+    <form action="" method="POST" enctype="multipart/form-data" class="">
+<div>
+    <input type="text" name="id" hidden value="<%= article.id %>">
+   <p><label for="title">Վերնագիր</label></p> 
+    <input type="text" name="title" id="title" value="<%= article.title %>">
+</div>
+
+<div>    
+   <p><label for="description">Նկարագրություն</label></p> 
+    <input type="text" name="description" id="description" value="<%= article.description %>">
+</div>
+
+<div>
+   <p><label for="content">Տեքստ</label></p> 
+    <textarea name="content" id="content" cols="30" rows="10" ><%= article.content %></textarea>
+</div>
+
+<div>
+    <img src="/uploads/<%= article.imgname %>" alt="" style="max-width: 200px; max-height: 200px;">
+    <input type="file" name="imgfile" id="imgfile" >
+    <input type="text" name="imgname" hidden value="<%= article.imgname %>">
+</div>
+
+<div >
+    <input type="submit" name="" id="" value="Հաստատել">
+</div>
+
+    </form>
+
+    <a href="/admin/articles">
+        <button style="margin-left: 30px;" >Չեղարկել</button></a>
+</div>
+
+
+<%- include('components/footer.ejs') -%>
